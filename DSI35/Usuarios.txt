@@ -1,0 +1,15 @@
+UserName=marco
+Password=123
+Tipo=1
+Status=si
+
+UserName=sofia
+Password=123
+Tipo=2
+Status=si
+
+UserName=marco
+Password=1111
+Tipo=a
+Status=admin
+

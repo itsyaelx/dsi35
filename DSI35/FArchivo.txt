@@ -1,0 +1,13 @@
+<html>
+    <form method="post" action="ProcesaArchivo.php">
+        <label>UserName</label>
+        <input type="text" name="UserName" id="UserName">
+        <label>Password</label>
+        <input type="text" name="Password" id="Password">
+        <label>Tipo</label>
+        <input type="text" name="Tipo" id="Tipo">
+        <label>Status</label>
+        <input type="text" name="Status" id="Status">
+        <input type="submit">
+    </form>
+</html>
