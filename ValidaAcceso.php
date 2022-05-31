@@ -9,6 +9,7 @@
     $Result=Ejecutar($Con,$SQL);
     $Existe=mysqli_num_rows($Result);
     $Fila= mysqli_fetch_row($Result);
+
     if($Existe==1) {
         //print("El usuario existe");
         

@@ -41,5 +41,7 @@
     ,'$Propietario','$Entidad','$Conductor','$NumLicencia','$FolioTarjeta','$IdVehiculo')";
     $Result=Ejecutar($Con,$SQL);
     Desconectar($Con);
+
+    print('<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=FMultas.php">');
 ?>
 

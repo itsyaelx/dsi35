@@ -3,7 +3,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Sistema de control vehicular</title>
         <link rel="stylesheet" href="styles\styles.css">
     </head>
 
@@ -14,6 +14,7 @@
             <div id="contenedor_logo_gob">
                 <img id="logo_gob" src="imagenes\FInicio_Sesion\logo gob queretaro.jpeg" alt="">
             </div>
+
             <img id="logo_gob2" src="imagenes\FInicio_Sesion\logo2 gob.jpeg" alt="">
 
         </div>
@@ -31,7 +32,16 @@
             <div class="contenedor">
                 <label>Password</label>
                 <input class="inicio" type="password" name="Password" id="Password" autocomplete="off">
+                <label></label>
             </div>
+
+            <div class="contenedor">
+                <label>Key</label>
+                <input class="inicio" type="file" name="Key" id="Key"  accept=".txt">
+                <label></label>
+            </div>
+
+            
             <input class="inicio" id="boton_enviarIS"type="submit" value="Acceder" >
         </form>
     </body>

@@ -18,5 +18,5 @@
         $SQL="INSERT INTO Propietarios VALUES('$IdPropietario','$Localidad','$Municipio','$Nombre','$RFC')";
         $Result=Ejecutar($Con,$SQL);
         Desconectar($Con);
-
+        print('<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=FPropietarios.php">');
 ?>

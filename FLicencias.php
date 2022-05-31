@@ -39,9 +39,11 @@
 		<label> FechaExp </label>
 		<input type="date" id="FechaExp" name="FechaExp" required="Requerido" >
 		<br>
-		<label> FechaVencimiento </label>
-		<input type="date" id="FechaVencimiento" name="FechaVencimiento" required="Requerido" >
-		<br>
+		<label> Vigencia </label>
+		<select type="text" name="Vigencia" id="Vigencia">
+            <option value="3">3</option>
+            <option value="5">5</option>
+        </select>
 		<label> Restriccion </label>
 		<input type="text" id="Restriccion" name="Restriccion" >
 		<br>

@@ -39,5 +39,6 @@
     ,'$Tecnico','$FechaExpedicion','$Motivo','$Semestre','$Vigencia','$IdVehiculo')";
     $Result=Ejecutar($Con,$SQL);
     Desconectar($Con);
+    print('<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=FTarjetasVerificacion.php">');
 ?>
 

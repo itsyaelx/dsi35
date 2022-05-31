@@ -27,7 +27,7 @@
     if($_FILES["Foto"]["error"]) {
         echo "Se ha producido un error" . $_FILES["Foto"]["error"];
     } else {
-        if($_FILES["Firma"]["type"]=="image/jpg" || $_FILES["Firma"]["type"]=="image/jpeg" ) {
+        if($_FILES["Foto"]["type"]=="image/jpg" || $_FILES["Foto"]["type"]=="image/jpeg" ) {
             if(move_uploaded_file($_FILES["Foto"]["tmp_name"],"C:\\xampp\htdocs\Proyecto Final\dsi35\imagenes\FotosConductores\Foto".$Id.".jpg")) {
 
             } else {
@@ -49,7 +49,7 @@
         if($_FILES["Firma"]["type"]=="image/jpg" || $_FILES["Firma"]["type"]=="image/jpeg" ) {
             if(move_uploaded_file($_FILES["Firma"]["tmp_name"],"C:\\xampp\htdocs\Proyecto Final\dsi35\imagenes\FirmasConductores\Firma".$Id.".jpg")) {
                 
-                $Firma = "C:\\\\xampp\\\\htdocs\\\\Proyecto Final\\\\dsi35\\\\imagenes\\\\FotosConductores\\\\Firma".$Id.".jpg";
+                $Firma = "C:\\\\xampp\\\\htdocs\\\\Proyecto Final\\\\dsi35\\\\imagenes\\\\FirmasConductores\\\\Firma".$Id.".jpeg";
 
                 include("Conexion.php");
                 $Con=Conectar();
@@ -64,6 +64,8 @@
         }
 
     }
+
+    
 
 
 
