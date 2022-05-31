@@ -1,9 +1,9 @@
 
 <html>
 	<head>
-		<link rel="stylesheet" href="Styles/Style.css">
+		<link rel="stylesheet" href="styles/style.css">
 	</head>
-	<form method="post" action="IConductores.php">
+	<form method="post" action="IConductores.php" enctype="multipart/form-data">
 		<label> Conductores </label>
 		<p>
 		<label> Id </label>
@@ -31,13 +31,13 @@
 		<input type="date" id="FechaNacimiento" name="FechaNacimiento" required="Requerido">
 		<br>
 		<label> Firma </label>
-		<input type="text" id="Firma" name="Firma" required="Requerido">
+		<input type="file" id="Firma" name="Firma" required="Requerido" accept=".jpg">
 		<br>
 		<label> Foto </label>
-		<input type="text" id="Foto" name="Foto" required="Requerido">
+		<input type="file" id="Foto" name="Foto" required="Requerido" accept=".jpg">
 		<br>
 		<label> Donador </label>
-		<select name="Donador" id="Donador" required="Requerido">
+		<select name="Donador" id="Donador" required="Requerido" >
 			<option value="0">No</option>
 			<option value="1">Si</option>
 		</select>

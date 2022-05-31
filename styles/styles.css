@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#imagen_usuario {
+    height: 300px;
+    margin-top: 20px;
+}
+
+#body_inicio_sesion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    background-color: red;
+}
+
+#form_inicio_sesion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    width: 70vh;
+}
+
+.contenedor{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#boton_enviarIS {
+    margin-top: 10px;
+}
+
+#logo_gob {
+
+}
+
+#contenedor_logo_gob {
+    align-self: flex-start;
+    overflow:auto;
+    height: 100px;
+}
