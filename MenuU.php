@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(isset($_SESSION['Marco123'])) {
+    if(isset($_SESSION['Usuario123'])) {
 
     
 ?>
@@ -115,6 +115,10 @@
                 </li>
 			</ul>
 		</div>
+
+		<form method="get" action="CerrarSesion.php">
+ 			<button type="submit">Cerrar Sesión
+		</form>
 	</body>
 </html>
 <?php

@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(isset($_SESSION['Admin123'])) {
+
+    
+?>
+
 <form method="get">
     <label> Valor </label> 
     <input type="text" name="Valor" id="Valor" required="true">
@@ -62,4 +69,10 @@
         Desconectar($Con);
         }
 
+?>
+
+<?php
+    } else {
+        print('<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=Facceso.html">');
+    }
 ?>

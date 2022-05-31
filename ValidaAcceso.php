@@ -21,10 +21,12 @@
                 if($Fila[4]==0) {
                     print("Cuenta sin bloqueo");
                     print("ENTRAR");
-                    $_SESSION['Marco123']=1;
+                    
                     if($Fila[2]=="A"){
+                        $_SESSION['Admin123']=1;
                         print('<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=MenuA.php">');
                     }else {
+                        $_SESSION['Usuario123']=1;
                         print('<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=MenuU.php">');
                     }
                 } else {

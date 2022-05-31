@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(isset($_SESSION['Admin123'])) {
+
+    
+?>
+
 <html>
 	<form method="get" action="ILicencias.php"> <!--Action indica qué archivo ejecutar después de mandar el formulario -->
 		<label> Licencias </label>
@@ -30,3 +37,9 @@
 	</form>
 
 </html>
+
+<?php
+    } else {
+        print('<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=Facceso.html">');
+    }
+?>

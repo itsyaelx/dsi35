@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if(isset($_SESSION['Admin123'])) {
+
+    
+?>
+
+
 <html>
 	<form method="get" action="IVehiculos.php">
 		<label> Vehiculos </label>
@@ -71,3 +79,10 @@
 	</form>
 
 </html>
+
+
+<?php
+    } else {
+        print('<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=Facceso.html">');
+    }
+?>

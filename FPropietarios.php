@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(isset($_SESSION['Admin123'])) {
+
+    
+?>
+
 <html>
 	<form method="post" action="IPropietarios.php">
 		<label> Propietarios </label>
@@ -23,3 +30,10 @@
 	</form>
 
 </html>
+
+
+<?php
+    } else {
+        print('<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=Facceso.html">');
+    }
+?>
