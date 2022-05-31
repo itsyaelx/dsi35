@@ -1,4 +1,12 @@
 <?php
+    session_start();
+    if(isset($_SESSION['Admin123'])) {
+
+    
+?>
+
+
+<?php
 	$FolioCertificado = $_REQUEST['FolioCertificado'];
 	include ("Conexion.php");
 	$Con = Conectar();
@@ -9,8 +17,24 @@
 ?>
 
 <html>
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tarjetas de Verificacion</title>
+        <link rel="stylesheet" href="styles\styles.css">
+    </head>
+
+	<div id="contenedor_logos">
+        <div id="contenedor_logo_gob">
+            <img id="logo_gob" src="imagenes\FInicio_Sesion\logo gob queretaro.jpeg" alt="">
+        </div>
+		<label class="titulo"> Actualizar Tarjetas de Verificación </label>
+        <img id="logo_gob2" src="imagenes\FInicio_Sesion\logo2 gob.jpeg" alt="">
+    </div>
+
 	<form method="post" action="UTarjetasVerificacion.php">
-		<label> TarjetasVerificacion </label>
 		<p>
 		<label> FolioCertificado</label>
 		<input type="number" id="FolioCertificado" name="FolioCertificado" required="Requerido"  value = "<?php print($Fila[0]); ?>">
@@ -59,7 +83,7 @@
 		<br>
 
 		
-		<input type="submit">
+		<input class="enviar" type="submit">
 	</form>
 
 </html>
@@ -91,6 +115,14 @@
 		$Result=Ejecutar($Con,$SQL);
 		print("Registros Actualizados= ". mysqli_affected_rows($Con));
 		Desconectar($Con);
+		print('<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=CTarjetasVerificacion.php">');
 	}
 
+?>
+
+
+<?php
+    } else {
+        print('<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=Facceso.html">');
+    }
 ?>

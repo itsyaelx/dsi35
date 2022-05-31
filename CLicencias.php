@@ -4,7 +4,21 @@
 
     
 ?>
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Licencias</title>
+        <link rel="stylesheet" href="styles\styles.css">
+    </head>
 
+	<div id="contenedor_logos">
+        <div id="contenedor_logo_gob">
+            <img id="logo_gob" src="imagenes\FInicio_Sesion\logo gob queretaro.jpeg" alt="">
+        </div>
+		<label class="titulo"> Consultar Licencias </label>
+        <img id="logo_gob2" src="imagenes\FInicio_Sesion\logo2 gob.jpeg" alt="">
+    </div>
 
 <form method="get">
     <label> Valor </label> 
@@ -18,7 +32,7 @@
     <input type="radio" name="Atributo" id="Atributo" value="Restriccion">Restriccion
     <input type="radio" name="Atributo" id="Atributo" value="IdConductor">IdConductor
     <br>
-    <input type="submit">
+    <input class="enviar" type="submit">
 
 
 

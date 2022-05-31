@@ -7,10 +7,22 @@
 
 <html>
 	<head>
-		<link rel="stylesheet" href="styles/style.css">
-	</head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conductores</title>
+        <link rel="stylesheet" href="styles\styles.css">
+    </head>
+
+	<div id="contenedor_logos">
+        <div id="contenedor_logo_gob">
+            <img id="logo_gob" src="imagenes\FInicio_Sesion\logo gob queretaro.jpeg" alt="">
+        </div>
+		<label class="titulo"> Conductores </label>
+        <img id="logo_gob2" src="imagenes\FInicio_Sesion\logo2 gob.jpeg" alt="">
+    </div>
+
 	<form method="post" action="IConductores.php" enctype="multipart/form-data">
-		<label> Conductores </label>
 		<p>
 		<label> Id </label>
 		<input type="number" id="Id" name="Id" required="Requerido">

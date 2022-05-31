@@ -5,6 +5,22 @@
     
 ?>
 
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conductores</title>
+        <link rel="stylesheet" href="styles\styles.css">
+    </head>
+
+	<div id="contenedor_logos">
+        <div id="contenedor_logo_gob">
+            <img id="logo_gob" src="imagenes\FInicio_Sesion\logo gob queretaro.jpeg" alt="">
+        </div>
+		<label class="titulo"> Consultar Conductores </label>
+        <img id="logo_gob2" src="imagenes\FInicio_Sesion\logo2 gob.jpeg" alt="">
+    </div>
+
 
 <form method="get">
     <label> Valor </label> 
@@ -21,7 +37,7 @@
     <input type="radio" name="Atributo" id="Atributo" value="Donador">Donador
     <input type="radio" name="Atributo" id="Atributo" value="Antiguedad">Antiguedad
     <br>
-    <input type="submit">
+    <input class="enviar" type="submit">
 
 
 
@@ -40,7 +56,7 @@
         //print("Numero---Tipo---FechaExp---FechaVencimiento---Restricción---IdConductor"."<br>");
         for($f=0; $f<mysqli_num_rows($Result);$f++){
             $Fila=mysqli_fetch_row($Result); //Vector o arreglo de 1 dimensión
-            print("<tr> <td>".$Fila[0]."</td> <td>".$Fila[1]."</td> <td>".$Fila[2]."</td> <td>".$Fila[3]."</td> <td>".$Fila[4]."</td> <td>".$Fila[5]."</td> <td>".$Fila[6]."</td> <td>".$Fila[7]."</td> <td>".$Fila[8]."</td> <td> <a href=UConductores.php?Numero=".$Fila[0].">Actualiza </a> </td> <td> <a href=DConductores.php?Numero=".$Fila[0].">Elimina </a> </td> </tr>");
+            print("<tr> <td>".$Fila[0]."</td> <td>".$Fila[1]."</td> <td>".$Fila[2]."</td> <td>".$Fila[3]."</td> <td>".$Fila[4]."</td> <td>".$Fila[5]."</td> <td>".$Fila[6]."</td> <td>".$Fila[7]."</td> <td>".$Fila[8]."</td> <td> <a href=UConductores.php?Id=".$Fila[0].">Actualiza </a> </td> <td> <a href=DConductores.php?Numero=".$Fila[0].">Elimina </a> </td> </tr>");
         }
         //finalizar tabla
         print("</table>");

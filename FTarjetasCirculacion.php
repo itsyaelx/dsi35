@@ -6,8 +6,23 @@
 ?>
 
 <html>
-	<form method="get" action="ITarjetasCirculacion.php">
-		<label> TarjetasCirculacion </label>
+
+	<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tarjetas de Circulacion</title>
+        <link rel="stylesheet" href="styles\styles.css">
+    </head>
+
+	<div id="contenedor_logos">
+        <div id="contenedor_logo_gob">
+            <img id="logo_gob" src="imagenes\FInicio_Sesion\logo gob queretaro.jpeg" alt="">
+        </div>
+		<label class="titulo"> Tarjetas de Circulación </label>
+        <img id="logo_gob2" src="imagenes\FInicio_Sesion\logo2 gob.jpeg" alt="">
+    </div>
+	<form class="formulario" method="get" action="ITarjetasCirculacion.php">
 		<p>
 		<label> FolioTarjeta </label>
 		<input type="number" id="FolioTarjeta" name="FolioTarjeta" required="Requerido">
@@ -35,7 +50,7 @@
 		<br>
 		
 		
-		<input type="submit">
+		<input class="enviar" type="submit">
 	</form>
 
 </html>

@@ -1,4 +1,11 @@
 <?php
+    session_start();
+    if(isset($_SESSION['Admin123'])) {
+
+    
+?>
+
+<?php
 	$Folio = $_REQUEST['Folio'];
 	include ("Conexion.php");
 	$Con = Conectar();
@@ -9,8 +16,24 @@
 ?>
 
 <html>
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Multas</title>
+        <link rel="stylesheet" href="styles\styles.css">
+    </head>
+
+	<div id="contenedor_logos">
+        <div id="contenedor_logo_gob">
+            <img id="logo_gob" src="imagenes\FInicio_Sesion\logo gob queretaro.jpeg" alt="">
+        </div>
+		<label class="titulo"> Actualizar Multas </label>
+        <img id="logo_gob2" src="imagenes\FInicio_Sesion\logo2 gob.jpeg" alt="">
+    </div>
+
 	<form method="post" action="UMultas.php">
-		<label> Multas </label>
 		<p>
 		<label> Folio </label>
 		<input type="number" id="Folio" name="Folio" required="Requerido" value = "<?php print($Fila[0]); ?>">
@@ -59,7 +82,7 @@
 		<br>
 
 		
-		<input type="submit">
+		<input class="enviar" type="submit">
 	</form>
 
 </html>
@@ -88,8 +111,16 @@
         Garantia='$Garantia', Propietario='$Propietario', Entidad='$Entidad',Conductor='$Conductor', NumLicencia='$NumLicencia',
         FolioTarjeta='$FolioTarjeta', IdVehiculo='$IdVehiculo' WHERE Folio='$Folio' ";
 		$Result=Ejecutar($Con,$SQL);
-		print("Registros Actualizados= ". mysqli_affected_rows($Con));
+		//print("Registros Actualizados= ". mysqli_affected_rows($Con));
 		Desconectar($Con);
+		print('<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=CMultas.php">');
 	}
 
+?>
+
+
+<?php
+    } else {
+        print('<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=Facceso.html">');
+    }
 ?>

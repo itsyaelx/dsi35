@@ -6,8 +6,25 @@
 ?>
 
 <html>
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tarjetas de Verificacion</title>
+        <link rel="stylesheet" href="styles\styles.css">
+    </head>
+
+	<div id="contenedor_logos">
+        <div id="contenedor_logo_gob">
+            <img id="logo_gob" src="imagenes\FInicio_Sesion\logo gob queretaro.jpeg" alt="">
+        </div>
+		<label class="titulo"> Tarjetas de verificación </label>
+        <img id="logo_gob2" src="imagenes\FInicio_Sesion\logo2 gob.jpeg" alt="">
+    </div>
+
+
 	<form method="post" action="ITarjetasVerificacion.php">
-		<label> TarjetasVerificacion </label>
 		<p>
 		<label> FolioCertificado</label>
 		<input type="number" id="FolioCertificado" name="FolioCertificado" required="Requerido">
@@ -59,7 +76,7 @@
 		<br>
 
 		
-		<input type="submit">
+		<input class="enviar" type="submit">
 	</form>
 
 </html>

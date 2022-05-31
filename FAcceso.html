@@ -9,9 +9,15 @@
 
 
     <body id="body_inicio_sesion">
-        <div>
-            <img id="contenedor_logo_gob" src="imagenes\FInicio_Sesion\logo gob queretaro.jpeg" alt="">
+
+        <div id="contenedor_logos">
+            <div id="contenedor_logo_gob">
+                <img id="logo_gob" src="imagenes\FInicio_Sesion\logo gob queretaro.jpeg" alt="">
+            </div>
+            <img id="logo_gob2" src="imagenes\FInicio_Sesion\logo2 gob.jpeg" alt="">
+
         </div>
+
         
         <h1>Sistema de Control Vehicular</h1>
         <img src="imagenes\FInicio_Sesion\16363.png" id="imagen_usuario">
@@ -19,14 +25,14 @@
             <h2>Iniciar Sesión</h2>
             <div class="contenedor">
                 <label>UserName</label>
-                <input type="text" name="UserName" id="UserName">
+                <input class="inicio" type="text" name="UserName" id="UserName">
             </div>
 
             <div class="contenedor">
                 <label>Password</label>
-                <input type="text" name="Password" id="Password">
+                <input class="inicio" type="password" name="Password" id="Password" autocomplete="off">
             </div>
-            <input id="boton_enviarIS"type="submit" value="Acceder" >
+            <input class="inicio" id="boton_enviarIS"type="submit" value="Acceder" >
         </form>
     </body>
 

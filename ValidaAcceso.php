@@ -10,17 +10,17 @@
     $Existe=mysqli_num_rows($Result);
     $Fila= mysqli_fetch_row($Result);
     if($Existe==1) {
-        print("El usuario existe");
+        //print("El usuario existe");
         
         if($Fila[1]==$FPassword) {
-            print("Contraseña correcta");
+            //print("Contraseña correcta");
             $SQL="UPDATE Cuentas set intentos=0 WHERE UserName = '$FUserName';";
             $Result=Ejecutar($Con,$SQL);
             if($Fila[3]==1) {
-                print("Cuenta activa");
+                //print("Cuenta activa");
                 if($Fila[4]==0) {
-                    print("Cuenta sin bloqueo");
-                    print("ENTRAR");
+                    //print("Cuenta sin bloqueo");
+                    //print("ENTRAR");
                     
                     if($Fila[2]=="A"){
                         $_SESSION['Admin123']=1;
@@ -30,10 +30,10 @@
                         print('<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=MenuU.php">');
                     }
                 } else {
-                    print("Cuenta bloqueada");
+                    //print("Cuenta bloqueada");
                 }
             } else {
-                print("Cuenta NO activa");
+                //print("Cuenta NO activa");
             }
         } else {
 

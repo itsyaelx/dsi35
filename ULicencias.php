@@ -1,4 +1,12 @@
 <?php
+    session_start();
+    if(isset($_SESSION['Admin123'])) {
+
+    
+?>
+
+
+<?php
 	$Numero = $_REQUEST['Numero'];
 	include ("Conexion.php");
 	$Con = Conectar();
@@ -11,6 +19,21 @@
 
 
 <html>
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Licencias</title>
+        <link rel="stylesheet" href="styles\styles.css">
+    </head>
+
+	<div id="contenedor_logos">
+        <div id="contenedor_logo_gob">
+            <img id="logo_gob" src="imagenes\FInicio_Sesion\logo gob queretaro.jpeg" alt="">
+        </div>
+		<label class="titulo"> Actualizar Licencias </label>
+        <img id="logo_gob2" src="imagenes\FInicio_Sesion\logo2 gob.jpeg" alt="">
+    </div>
 	<form method="get" action="ULicencias.php"> <!--Action indica qué archivo ejecutar después de mandar el formulario -->
 		<label> Licencias </label>
 		<p>
@@ -33,13 +56,14 @@
 		<input type="number" id="IdConductor" name="IdConductor" required="Requerido" value = "<?php print($Fila[5]); ?>">
 		<br>
 		
-		<input type="submit">
+		<input class="enviar" type="submit">
 	</form>
 
 </html>
 
 <?php
 	if(isset($_GET["Tipo"])) {
+		
 		$Tipo=$_GET['Tipo'];
 		$FechaExp=$_GET['FechaExp'];
 		$FechaVencimiento=$_GET['FechaVencimiento'];
@@ -52,6 +76,13 @@
 		$Result=Ejecutar($Con,$SQL);
 		print("Registros Actualizados= ". mysqli_affected_rows($Con));
 		Desconectar($Con);
+		print('<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=CLicencias.php">');
 	}
 
+?>
+
+<?php
+    } else {
+        print('<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=Facceso.html">');
+    }
 ?>

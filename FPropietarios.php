@@ -6,8 +6,23 @@
 ?>
 
 <html>
-	<form method="post" action="IPropietarios.php">
-		<label> Propietarios </label>
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Propietarios</title>
+        <link rel="stylesheet" href="styles\styles.css">
+    </head>
+
+	<div id="contenedor_logos">
+        <div id="contenedor_logo_gob">
+            <img id="logo_gob" src="imagenes\FInicio_Sesion\logo gob queretaro.jpeg" alt="">
+        </div>
+		<label class="titulo"> Propietarios </label>
+        <img id="logo_gob2" src="imagenes\FInicio_Sesion\logo2 gob.jpeg" alt="">
+    </div>
+
+	<form class="formulario" method="post" action="IPropietarios.php">
 		<p>
 		<label> IdPropietario</label>
 		<input type="number" id="IdPropietario" name="IdPropietario" required="Requerido">
@@ -26,7 +41,7 @@
 		<br>
 		
 		
-		<input type="submit">
+		<input class="enviar" type="submit">
 	</form>
 
 </html>

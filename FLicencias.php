@@ -6,8 +6,24 @@
 ?>
 
 <html>
-	<form method="get" action="ILicencias.php"> <!--Action indica qué archivo ejecutar después de mandar el formulario -->
-		<label> Licencias </label>
+
+	<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Licencias</title>
+        <link rel="stylesheet" href="styles\styles.css">
+    </head>
+
+	<div id="contenedor_logos">
+        <div id="contenedor_logo_gob">
+            <img id="logo_gob" src="imagenes\FInicio_Sesion\logo gob queretaro.jpeg" alt="">
+        </div>
+		<label class="titulo"> Licencias </label>
+        <img id="logo_gob2" src="imagenes\FInicio_Sesion\logo2 gob.jpeg" alt="">
+    </div>
+
+	<form class="formulario" method="get" action="ILicencias.php"> <!--Action indica qué archivo ejecutar después de mandar el formulario -->
 		<p>
 		<label> Numero </label>
 		<input type="number" id="Numero" name="Numero" required="Requerido">
@@ -33,7 +49,7 @@
 		<input type="number" id="IdConductor" name="IdConductor" required="Requerido" >
 		<br>
 		
-		<input type="submit">
+		<input class="enviar" type="submit">
 	</form>
 
 </html>
