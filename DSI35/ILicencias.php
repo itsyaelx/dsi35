@@ -6,7 +6,7 @@
 //Las variables, constantes y arreglos llevan un "$"
 
     //$NumLicencia=$_GET['Numero']; //Ve y saca el valor de lo que tenga el id de NumLicencia
-    require('fpdf.php');
+    require('fpdf.php');//
     $Tipo=$_GET['Tipo'];
     $FechaExp=$_GET['FechaExp'];
     $FechaVencimiento=$_GET['FechaVencimiento'];

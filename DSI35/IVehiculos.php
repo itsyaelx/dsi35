@@ -1,6 +1,6 @@
 <?php
 
-    $IdVehiculo=$_REQUEST['IdVehiculo']; 
+    $IdVehiculo=$_REQUEST['IdVehiculo']; //
     $Origen=$_REQUEST['Origen'];
     $Color=$_REQUEST['Color'];
     $Cilindraje=$_REQUEST['Cilindraje'];
