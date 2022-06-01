@@ -150,3 +150,9 @@ table {
  th {
     background: #eee;
  }
+
+ a {
+     font-size: 40px;
+     align-self: flex-end;
+     justify-self: flex-end;
+ }

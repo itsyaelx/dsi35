@@ -10,6 +10,8 @@
     $Existe=mysqli_num_rows($Result);
     $Fila= mysqli_fetch_row($Result);
 
+
+
     if($Existe==1) {
         //print("El usuario existe");
         
@@ -31,14 +33,17 @@
                         print('<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=MenuU.php">');
                     }
                 } else {
-                    //print("Cuenta bloqueada");
+                    print("Cuenta bloqueada");
+                    print("<a href='Facceso.html'>Volver</a>");
                 }
             } else {
-                //print("Cuenta NO activa");
+                print("Cuenta NO activa");
+                print("<a href='Facceso.html'>Volver</a>");
             }
         } else {
 
             print("Contraseña incorrecta");
+            print("<a href='Facceso.html'>Volver</a>");
             if($Fila[5]==2) {
                 $SQL="UPDATE Cuentas set Bloqueado=1 WHERE UserName = '$FUserName';";
                 $Result=Ejecutar($Con,$SQL);
@@ -51,6 +56,7 @@
         }
     } else {
         print("El usuario NO existe");
+        print("<a href='Facceso.html'>Volver</a>");
     }
     Desconectar($Con);
 ?>

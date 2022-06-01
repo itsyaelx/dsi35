@@ -31,9 +31,7 @@
             <img id="logo_gob" src="imagenes\FInicio_Sesion\logo gob queretaro.jpeg" alt="">
         </div>
 		<label class="titulo"> Actualizar Conductores </label>
-		<div>
                 <a href="MenuA.php">Menu</a>
-            </div>
         <img id="logo_gob2" src="imagenes\FInicio_Sesion\logo2 gob.jpeg" alt="">
     </div>
 
