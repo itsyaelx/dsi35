@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -22,7 +23,7 @@
         
         <h1>Sistema de Control Vehicular</h1>
         <img src="imagenes\FInicio_Sesion\16363.png" id="imagen_usuario">
-        <form id="form_inicio_sesion" method="post" action="ValidaAcceso.php">
+        <form id="form_inicio_sesion" method="post" action="ValidaAcceso.php" enctype="multipart/form-data">
             <h2>Iniciar Sesión</h2>
             <div class="contenedor">
                 <label>UserName</label>
@@ -35,9 +36,9 @@
                 <label></label>
             </div>
 
-            <div class="contenedor" >
+            <div class="contenedor">
                 <label>Key</label>
-                <input class="inicio" type="file" name="Key" id="Key"  accept=".txt">
+                <input class="inicio" type="file" name="Key" id="Key"  accept=".txt" >
                 <label></label>
             </div>
 

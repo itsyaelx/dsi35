@@ -11,7 +11,6 @@
     $Fila= mysqli_fetch_row($Result);
 
 
-
     if($Existe==1) {
         //print("El usuario existe");
         
@@ -24,26 +23,58 @@
                 if($Fila[4]==0) {
                     //print("Cuenta sin bloqueo");
                     //print("ENTRAR");
-                    
-                    if($Fila[2]=="A"){
-                        $_SESSION['Admin123']=1;
-                        print('<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=MenuA.php">');
-                    }else {
-                        $_SESSION['Usuario123']=1;
-                        print('<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=MenuU.php">');
+
+                    if($_FILES["Key"]["error"]){
+                        echo "Se ha producido un error" . $_FILES["Key"]["error"];
                     }
+                    else{
+
+                        if($_FILES["Key"]["type"] == "text/plain"){
+
+                            $Manejador = fopen('Documentos\Keys\\'.$FUserName."Key.txt", "r");
+                            $Key = fgets($Manejador);
+                            fclose($Manejador);
+
+                            $Manejador = fopen($_FILES["Key"]["tmp_name"], "r");
+                            $KeyIngresada = fgets($Manejador);
+                            fclose($Manejador);
+
+                            if($Key == $KeyIngresada){
+                                if($Fila[2]=="A"){
+                                    $_SESSION['Admin123']=1;
+                                    print('<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=MenuA.php">');
+                                }else {
+                                    $_SESSION['Usuario123']=1;
+                                    print('<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=MenuU.php">');
+                                }
+                            }
+                            else{
+                                print("Unrecognized key file");
+                                print("<a href='Facceso.html'> Volver</a>");
+                            }
+                            
+                        }
+                        else {
+
+                            print("Seleccione un archivo .txt");
+                            print("<a href='Facceso.html'> Volver</a>");
+
+                        }
+
+                    }
+                    
                 } else {
                     print("Cuenta bloqueada");
-                    print("<a href='Facceso.html'>Volver</a>");
+                    print("<a href='Facceso.html'> Volver</a>");
                 }
             } else {
                 print("Cuenta NO activa");
-                print("<a href='Facceso.html'>Volver</a>");
+                print("<a href='Facceso.html'> Volver</a>");
             }
         } else {
 
             print("Contraseña incorrecta");
-            print("<a href='Facceso.html'>Volver</a>");
+            print("<a href='Facceso.html'> Volver</a>");
             if($Fila[5]==2) {
                 $SQL="UPDATE Cuentas set Bloqueado=1 WHERE UserName = '$FUserName';";
                 $Result=Ejecutar($Con,$SQL);
@@ -56,7 +87,7 @@
         }
     } else {
         print("El usuario NO existe");
-        print("<a href='Facceso.html'>Volver</a>");
+        print("<a href='Facceso.html'> Volver</a>");
     }
     Desconectar($Con);
 ?>

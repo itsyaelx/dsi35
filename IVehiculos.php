@@ -178,10 +178,6 @@
     $newLocation = 'C:\xampp\htdocs\Proyecto Final\dsi35\Documentos\Vehiculos\\Vehiculo'.$IdVehiculo.".xml";
     $moved = rename($currentLocation, $newLocation);
 
-    
-        
-
-
 
 ?>
 
